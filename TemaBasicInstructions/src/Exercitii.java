@@ -215,7 +215,7 @@ public class Exercitii {
 		}
 		while (ogl>0) 
 		{
-		System.out.println(ogl%10);
+		System.out.print(ogl%10 + " ");
 		ogl= ogl/10;
 		}
 	}
@@ -239,7 +239,7 @@ public class Exercitii {
 		int min = 10;
 		while (nr>0)
 		{
-			if (nr%10>min)
+			if (nr%10<min)
 				{min=nr%10;}
 			nr=nr/10;
 		}
