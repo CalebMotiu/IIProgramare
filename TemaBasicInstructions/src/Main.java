@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Exercitii.problema20();
+		Exercitii.problema16();
 	}
 
 }
