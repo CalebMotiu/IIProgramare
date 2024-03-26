@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
@@ -43,17 +44,23 @@ public class GradesCalculation {
 				}
 				intervalReader.close();
 		
-				
+			HashSet<Double> numberSet = new HashSet<Double>();
 			BufferedReader numberReader = new BufferedReader(new FileReader(numberFile));
 			String numberLine = numberReader.readLine();
 			while(numberLine != null) 
 			{
 				String[] numbers = numberLine.split("\\s+");
-				for (String numersString : numbers)
+				for (String numbersString : numbers)
 				{
-					Double number = Double.parseDouble(numersString);
+					Double number = Double.parseDouble(numbersString);
+					if(numberSet.contains(number))
+						System.out.println("Number "+number+" already exists in this list of numbers");
+					else
+					{
+						numberSet.add(number);
 					for (GradesCategory interval : intervals)
 						interval.testNumber(number);
+					}
 				}
 				numberLine= numberReader.readLine();
 
