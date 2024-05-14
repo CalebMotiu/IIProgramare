@@ -8,19 +8,21 @@ public class InvestmentCompany {
 		projects.add(p);
 	}
 	
-	public static void getBestInvestment() {
+	public static Project getBestInvestment() {
 		double bestRisk = projects.get(0).getRisk();
 		String nameOfBestInvestment = projects.get(0).getTitle();
+		Project project = projects.get(0);
 		for (Project p : projects) {
 			if (p.getRisk() < bestRisk) {
 				bestRisk = p.getRisk();
 				nameOfBestInvestment = p.getTitle();
+				project = p;
 			}
 		}
 		System.out.println("The best project to invest in is" + nameOfBestInvestment);
-		
-		
+		return project;
 	}
+	
 	
 	public static void main(String[] args) {
 
