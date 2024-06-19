@@ -25,6 +25,8 @@ public class Main {
 		
 		f1.afisareAngajati();
 		
+		f1.afisareClienti();
+		
 		f1.generareContract(100, c1);
 		try {
 			f1.eliberareFluturas(m1);

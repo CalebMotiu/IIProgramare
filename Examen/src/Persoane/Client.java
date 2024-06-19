@@ -12,6 +12,10 @@ public class Client {
 		return nume;
 	}
 	
+	public String toString() {
+		return nume;
+	}
+	
 	public boolean equals(Client client) {
 		if (this.nume.equals(client.getNume()))
 			return true;

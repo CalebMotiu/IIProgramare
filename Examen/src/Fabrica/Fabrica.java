@@ -40,6 +40,14 @@ public class Fabrica {
 		return clienti.add(client);
 	}
 	
+	public void afisareClienti() {
+		for (Client client : clienti) {
+			System.out.println(client);
+		}
+		System.out.println("\n");
+
+	}
+	
 	public boolean generareContract(int valoareaTotala,Client client) {
 		Acte a = new Oferta(valoareaTotala, client);
 		return acte.add(a);
