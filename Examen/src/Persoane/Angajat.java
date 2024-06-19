@@ -14,6 +14,7 @@ public abstract class Angajat {
 	
 	public String afisareSalar() {
 		double sum = valoareaNumerica + valoareaNumerica * 0.1 * anVechime;
+		System.out.println(sum + "\n");
 		String stringSum = String.valueOf(sum);
 		return stringSum;
 	}
